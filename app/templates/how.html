@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iAssist - View</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+
+    <link rel="icon" href="/static/icono.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="wrapper">
+            <div class="logo"></div>
+        </div>
+    </header>
+
+    <h2>Como usar la plataforma?</h2>
+    <h2>La plata forma la hemos creado de una manera simple y compacta para uso de cualquier persona
+    Primero Debes hacer click en "ADD EVENT" Te pedira dos datos importantes El nombre del evento y la fecha
+    en que se realizara, una vez creado el evento presionas el boton "ADD GUEST" una vez ahí podras registrar
+    el usuario que quieres invitar a tu evento pidiendo datos personal y como ultimo su estado....
+    S si va N si no va y P si esta pendiente en confirmar. tambien te pedira el evento, debes de colocar la id del evento
+    ¿no sabes cual es el id de tu evento? en la pagina de home hay un boton que dice "view" ahi te sale la informacion
+    de todos tus eventos creados mas los invitados a dichos eventos, al lado izquierdo del nombre del evento te saldra
+    cual es su id, terminas de registrar al invitado Y LISTO, ahora para cambiar el estado de la persona que pase de
+    pendiente a S o N simplemente en la pagina de home das click al boton de Edit y podras editar la condicion del estado
+    de tus invitados.</h2>
+    <h2> Gracias por usar iAssist esperamos sea de tu agrado. :D</h2>
+
+    <footer id="main-footer">
+		<p>&copy; All Rights Reserved 2017</p>
+        <nav>
+        	<a href="{{ url_for('inicio') }}">HOME</a>
+        </nav>
+	</footer>
+
+    <div id="preloader">
+    	<div id="loader"></div>
+   </div>
+
+<!--JavaScript-->
+   <script src="/static/jquery-1.11.3.min.js"></script>
+   <script src="/static/main.js"></script>
+</body>
+</html>

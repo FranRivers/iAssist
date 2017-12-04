@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iAssist - View</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+
+    <link rel="icon" href="/static/icono.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="wrapper">
+            <div class="logo"></div>
+        </div>
+    </header>
+<table class="view">
+    <thead>
+    </thead>
+    <tbody>
+    {%for event in events %}
+    <tr>
+        <th class="one">Nombre del evento</th>
+        <td class="two">{{ event.name_event  }}</td>
+        <td class="three">{{ event.date_event }}</td>
+        {%for User in users %}
+            {%if User.event == event.id%}
+                <tr>
+                    <td>{{ User.name }}</td>
+                    <td>{{ User.phone }}</td>
+                    <td>{{ User.email }}</td>
+                    <td>{{ User.estado }}</td>
+                </tr>
+            {%endif%}
+        {% endfor %}
+
+    </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+	<footer id="main-footer">
+		<p>&copy; All Rights Reserved 2017</p>
+        <nav>
+        	<a href="{{ url_for('inicio') }}">HOME</a>
+        </nav>
+	</footer>
+
+    <div id="preloader">
+    	<div id="loader"></div>
+   </div>
+
+<!--JavaScript-->
+   <script src="/static/jquery-1.11.3.min.js"></script>
+   <script src="/static/main.js"></script>
+
+</body>
+</html>

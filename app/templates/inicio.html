@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>iAssist - Home</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="icon" href="/static/icono.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+            <div class="wrapper">
+                <div class="logo"></div>
+                <nav>
+                    <a href="{{ url_for('adde') }}">ADD EVENT</a>
+                    <a href="{{ url_for('add') }}">ADD GUEST</a>
+                    <a href="{{ url_for('view') }}">VIEW</a>
+                    <a href="{{ url_for('edit') }}">EDIT</a>
+                    <a href="{{ url_for('logout') }}">LOG OUT</a>
+                </nav>
+            </div>
+        </header>
+{% for mensaje in get_flashed_messages() %}
+    {{ mensaje }}
+   {%- endfor %}
+    <h2>Bienvenido querido usuario</h2>
+        <h2>¡Le agradecemos que haga uso de nuestra plataforma!</h2>
+        <h2>Una plataforma comoda, sencilla e util para llevar control de la asistencia en tus eventos.</h2>
+
+        <footer id="main-footer">
+            <p>&copy; All Rights Reserved 2017</p>
+            <nav>
+        	    <a href="{{ url_for('how') }}">HOW TO USE IT</a>
+            </nav>
+        </footer>
+
+        <div id="preloader">
+            <div id="loader"></div>
+       </div>
+<!--JavaScript-->
+   <script src="static/jquery-1.11.3.min.js"></script>
+   <script src="static/main.js"></script>
+</body>
+</html>

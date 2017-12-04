@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iAssist - Add Guest</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+
+    <link rel="icon" href="/static/icono.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo"></div>
+        </div>
+    </header>
+<thead>
+<table class="edtable">
+
+    </thead>
+    <tbody>
+    {%for event in events %}
+    <tr>
+        <th class="edone">Nombre del evento</th>
+        <td class="edone">{{ event.name_event  }}</td>
+        {%for User in users %}
+            {%if User.event == event.id%}
+                <tr>
+                    <td>{{ User.name }}</td>
+                    <!--<td>{{ event.name_event }}</td>-->
+
+                    <td>
+                        <form action="{{ request.path }}" method="post">
+                            <div class="edit">
+                            <input type="text" name = "S" placeholder="Coloque el nuevo estado">
+                            </div>
+
+                            <div class="edit">
+                            <input type="hidden" name="id" value = "{{ User.id }}">
+                            </div>
+
+                            <input type = "submit" value = "Editar" class="buttom-three" >
+                        </form>
+                    </td>
+                    </form>
+                    </tr>
+
+            {%endif%}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+	<footer id="main-footer">
+		<p>&copy; All Rights Reserved 2017</p>
+        <nav>
+        	<a href="{{ url_for('inicio') }}">HOME</a>
+        </nav>
+	</footer>
+
+    <div id="preloader">
+    	<div id="loader"></div>
+   </div>
+
+<!--JavaScript-->
+   <script src="/static/jquery-1.11.3.min.js"></script>
+   <script src="/static/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iAssist - Add Event</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+
+    <link rel="icon" href="/static/icono.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo"></div>
+        </div>
+    </header>
+
+<h3>Registra Tu evento</h3>
+<hr/>
+{%- for categoria, mensaje in get_flashed_messages(with_categories=true) %}
+<div class="alert alert-danger">
+    {{ mensaje }}
+</div>
+{%- endfor %}
+
+<form action="{{ request.path }}" method="post">
+    <div class="groupone">
+    <label>Nombre del evento</label>
+    <input type="text" name="name_event" placeholder="Celebracion 100 años del abuelo." required><br>
+    </div>
+
+    <div class="groupone">
+    <label>Fecha del evento</label>
+    <input type="date" name="date_event" step="1" min="2017-12-04" max="2019-01-01" value="2017-12-04"><br>
+    </div>
+    <p><input type = "submit" value = "Registrar evento" class = "buttom" ></p>
+</form>
+	<footer id="main-footer">
+		<p>&copy; All Rights Reserved 2017</p>
+        <nav>
+        	<a href="{{ url_for('inicio') }}">HOME</a>
+        </nav>
+	</footer>
+
+    <div id="preloader">
+    	<div id="loader"></div>
+   </div>
+
+<!--JavaScript-->
+   <script src="/static/jquery-1.11.3.min.js"></script>
+   <script src="/static/main.js"></script>
+</body>
+</html>
+</body>
+</html>
