@@ -6,10 +6,13 @@
 Welcome to iAssist's documentation!
 ===================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+this is my introduction to this project
 
+
+
+.. toctree::
+   :maxdepth: 4
+   :caption: Contents:
 
 
 Indices and tables
@@ -18,3 +21,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
