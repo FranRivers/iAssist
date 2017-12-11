@@ -14,6 +14,12 @@ this is my introduction to this project
    :maxdepth: 4
    :caption: Contents:
 
+.. automodule:: app
+
+.. autoclass:: event
+.. autoclass:: User
+
+
 
 Indices and tables
 ==================
